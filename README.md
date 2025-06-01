@@ -32,8 +32,11 @@ I'm Karabo Maloka, a passionate **Marketing Coordinator** and **UX Design Enthus
 
 ---
 
-## 🖌️ Live Demo
+## 🔗 Live Site
+👉 https://portfolio-website-5x35vjhms-karabos-projects.vercel.app
 
-🔗 [https://karabomaloka.vercel.app](https://karabomaloka.vercel.app) *(Coming soon!)*
+---
+
+📫 For collaborations or freelance work, reach me via the contact section.
 
 

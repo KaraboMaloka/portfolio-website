@@ -8,13 +8,14 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import DesignGallery from "./components/Gallery/DesignGallery";
 
 
 const App = () => {
   return (
     <div>
         <Cursor />
-        <section id="Homepage">
+        <section id="Home">
           <Navbar />
           <Hero />
         </section>
@@ -31,6 +32,9 @@ const App = () => {
           <Parallax type="portfolio" />
         </section>
           <Portfolio />
+        <section id="Design Gallery">
+          <DesignGallery />
+        </section>
         <section id="Contact">
           <Contact />
         </section>

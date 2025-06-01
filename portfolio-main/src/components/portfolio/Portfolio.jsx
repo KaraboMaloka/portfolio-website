@@ -36,9 +36,9 @@ const items = [
     title: "SCiiS Newsletter Vol.13",
     job: "(Editor-in-Chief)",
     img: "./newsletter.jpeg",
-    desc: "Led editorial production for a digital publication highlighting UJ achievements, research, and innovation. I managed content curation, design flow, and stakeholder interviews while elevating the school's voice.",
+    desc: "Using my Journalism and Media Studies Diploma, I lead the editorial production for a digital publication highlighting UJ achievements, research, and innovation. I managed content curation, design flow, and stakeholder interviews while elevating the school's voice.",
     tags: ["Content Strategy", "Design Editing", "InDesign", "Storytelling", "Visual Branding"],
-    impact: "Most circulated edition of the SCiiS newsletter in 2023. Featured in university-wide communications."
+    impact: "Most circulated edition of the SCiiS newsletter in 2024. Featured in university-wide communications."
   },
 ];
 

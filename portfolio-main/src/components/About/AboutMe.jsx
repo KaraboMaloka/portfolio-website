@@ -55,7 +55,7 @@ const AboutMe = () => {
                 </div>
                 <div className='text-container'>
                     <p>
-                      Hello there. I’m Karabo Maloka, a dynamic Marketing Coordinator and UX Design Enthusiast currently pursuing a BCom Honours in Information Systems at the University of Johannesburg. My journey blends business strategy, digital storytelling, and human-centred design.
+                      Hello there. I’m Karabo Maloka, a dynamic Coordinator and Creative Designer currently pursuing a BCom Honours in Information Systems at the University of Johannesburg with the Department of Applied Information Systems. My journey blends business strategy, digital storytelling, and human-centred design.
                     </p>
 
                     <p>
@@ -67,7 +67,7 @@ const AboutMe = () => {
                     </p>
 
                     <p>
-                      I’m passionate about building digital experiences that are functional, inclusive, and future-ready — and I thrive in spaces where creativity meets systems thinking.
+                      I’m passionate about building digital experiences that are functional, inclusive, and future-ready. Additionally, I thrive in spaces where creativity meets systems thinking.
                     </p>
 
                 </div>

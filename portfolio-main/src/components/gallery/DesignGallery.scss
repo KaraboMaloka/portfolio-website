@@ -1,0 +1,90 @@
+@import "../../app.scss";
+
+.portfolio {
+  padding: 50px 20px;
+
+  .section-title {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: orange;
+    font-size: 66px;
+    z-index: 10;
+    background-color: #0c0c1d;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+
+    .carousel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  .design-card {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 10px 0 5px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ccc;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    button {
+      background-color: #fcb900;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #fff;
+        border: 2px solid #fcb900;
+      }
+    }
+  }
+}

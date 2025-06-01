@@ -8,7 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-import DesignGallery from "./components/Gallery/DesignGallery";
+import DesignGallery from "./components/gallery-temp/DesignGallery";
 
 
 const App = () => {

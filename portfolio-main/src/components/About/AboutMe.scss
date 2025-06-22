@@ -1,78 +1,120 @@
-// AboutMe.scss
-
-.Abouttitle{
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding-top: 40px;
-    text-align: center;
-    font-size: 36px;
-    justify-content: center;
-    align-items: center;
+.Abouttitle {
+  text-align: center;
+  font-size: 36px;
+  color: orange;
+  margin-top: 40px;
 }
-.about-me-container {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  
-    h1 {
-      color: orange;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      color: lightgray;
-      font-size: 1.2em;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-
-  }
-
-/* AboutMe.scss */
 
 .about-me-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content-container {
-    display: flex;
-  }
-  
-  .image-container {
-    margin-right: 20px;
-    flex-shrink: 0; /* Prevents the image from shrinking when the content is too wide */
-  }
-  
-  .text-container {
-    max-width: 900px; /* Adjust the max-width as needed */
-  }
-  
-  .profile-image {
-    width: 250px; 
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
 
-    
-    button { 
-      padding: 20px;
-      border: 1px solid white;
-      border-radius: 10px;
-      background-color: transparent;
-      color: white;
-      margin-right: 20px;
-      cursor: pointer;
-      font-weight: 300;  
+.about-me-container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 20px 20px 80px; // make room for buttons
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: orange;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    color: lightgray;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.image-container {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.profile-image {
+  width: 250px;
+  border-radius: 8px;
+}
+
+.text-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+
+  button {
+    padding: 12px 24px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}
+
+// MOBILE SCREENS
+@media screen and (max-width: 768px) {
+  .about-me-container {
+    padding: 20px 10px 60px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .text-container {
+    max-width: 100%;
+    padding: 0;
+
+    p {
+      font-size: 1em;
+      margin-bottom: 12px;
     }
   }
-  
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    gap: 10px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

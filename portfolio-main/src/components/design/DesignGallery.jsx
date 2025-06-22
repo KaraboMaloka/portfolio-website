@@ -1,11 +1,17 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import "./DesignGallery.scss";
 
 const designItems = [
   {
     title: "EPF Heritage Hackathon",
     image: "./CrazyCodeErrs.png",
-    description: "Figma Prototype that won us the 1st place at the Empire Partner Foundation Heritage Hackathon. ",
+    description: "Figma Prototype that won us the 1st place at the Empire Partner Foundation Heritage Hackathon.",
     link: "https://www.figma.com/proto/InFM0JAOE10d5bc8Yrda4P/Crazy-Code-Errs?node-id=13-412&p=f&t=8WkAXWNUcO2twZZH-1&scaling=min-zoom&content-scaling=fixed&page-id=3%3A3&starting-point-node-id=13%3A412",
   },
   {
@@ -30,7 +36,7 @@ const designItems = [
     title: "MASS",
     image: "./mass.png",
     description: "A Master Assessment Scheduling System for UJ Third Year Group Project. A platform to assist students and lecturers avoid any schedule conflicts.",
-    link: "https://www.figma.com/file/example3https://www.figma.com/proto/hsWbPvhC3xpV3tw3XOiqwZ/MASS-SYSTEM?node-id=689-404&t=yH6cwUmvGNWWVwol-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=689%3A404&show-proto-sidebar=1",
+    link: "https://www.figma.com/proto/hsWbPvhC3xpV3tw3XOiqwZ/MASS-SYSTEM?node-id=689-404&t=yH6cwUmvGNWWVwol-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=689%3A404&show-proto-sidebar=1",
   },
   {
     title: "UJ Artwork",
@@ -42,14 +48,33 @@ const designItems = [
 
 const DesignGallery = () => {
   return (
-    <div className="portfolio">
+    <div className="design-gallery">
       <h1 className="section-title">Design Gallery</h1>
-      <div className="carousel-wrapper">
-        <div className="carousel">
-          {designItems.slice(0, 3).map((item, index) => (
-            <div className="design-card" key={index}>
+      
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
+        {designItems.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="design-card">
               <img src={item.image} alt={item.title} />
-              <div className="textContainer">
+              <div className="text-container">
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -57,23 +82,9 @@ const DesignGallery = () => {
                 </a>
               </div>
             </div>
-          ))}
-        </div>
-        <div className="carousel">
-          {designItems.slice(3, 6).map((item, index) => (
-            <div className="design-card" key={index}>
-              <img src={item.image} alt={item.title} />
-              <div className="textContainer">
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  <button>View Design</button>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

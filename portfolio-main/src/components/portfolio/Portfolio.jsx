@@ -2,25 +2,24 @@ import { useState, useRef } from 'react';
 import "./Portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-
 const items = [
   {
     id: 1,
     title: "Sync Vibes App",
     job: "(Project Manager & UX Designer)",
     img: "./colour-logo.png",
-    desc: "Sync Vibes is a React-based platform developed to simplify event discovery, registration, and community engagement in university tech spaces. Designed with a focus on user accessibility and admin reporting tools, the platform improves the experience for both attendees and organizers.",
+    desc: "Sync Vibes is a React-based platform developed to simplify event discovery, registration, and community engagement in tech spaces. Designed with a focus on accessibility and reporting tools, to improve the experience for both attendees and organizers.",
     tags: ["React", "UX", "Event Tech", "User Research"],
     impact: "Used by 20+ students during the MTN Hackathon; improved RSVP tracking by 60%."
   },
   {
-   id: 2,
+    id: 2,
     title: "MASS: Master Assessment Scheduling System",
     job: "(Product Manager & UX Strategist)",
     img: "./LoginAdmin.png",
     desc: "MASS is a web-based scheduling solution developed at UJ to reduce clashes in exam and assessment timetables. My role focused on UX flows, stakeholder coordination, and aligning technical design with academic requirements.",
     tags: ["UI/UX", "Business Analysis", "Team Management", "Wireframing", "Problem-Solving"],
-    impact: "This Year=long project would help reduce scheduling conflicts across plenty modules in UJ. Designed user-friendly dashboards that would improv admin adoption by 40%."
+    impact: "This Year-long project would help reduce scheduling conflicts across plenty modules in UJ. Designed user-friendly dashboards that would improv admin adoption by 40%."
   },
   {
     id: 3,
@@ -43,17 +42,15 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-150, 150]); // Toned down range for less movement
 
   const handleButtonClick = () => {
-    
     switch (item.id) {
       case 1:
         window.open("/video.mp4", "_blank");
@@ -64,7 +61,7 @@ const Single = ({ item }) => {
       case 3:
         window.location.href = "https://gbvreporting.co.za/";
         break;
-      case 4:
+      case 5: // Fixed from case 4
         window.location.href = "https://mydigitalpublication.co.za/uj/cbe/SCiiS/vol13-newsletter/";
         break;
       default:
@@ -73,32 +70,25 @@ const Single = ({ item }) => {
   };
 
   return (
-    <section >
+    <section>
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt={item.title} />
           </div>
-          
-          <motion.div className="textContainer" style={{y}}>
-            <motion.div className="textContainer" style={{ y }}>
-  <h2>{item.title}</h2>
-  <p className="job">{item.job}</p>
-  <p>{item.desc}</p>
-
-  {item.tags && (
-    <div className="tags">
-      {item.tags.map((tag, idx) => (
-        <span className="tag" key={idx}>{tag}</span>
-      ))}
-    </div>
-  )}
-
-  {item.impact && <p className="impact"><strong>Impact:</strong> {item.impact}</p>}
-
-  <button onClick={handleButtonClick}>See Demo</button>
-</motion.div>
-
+          <motion.div className="textContainer" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p className="job">{item.job}</p>
+            <p>{item.desc}</p>
+            {item.tags && (
+              <div className="tags">
+                {item.tags.map((tag, idx) => (
+                  <span className="tag" key={idx}>{tag}</span>
+                ))}
+              </div>
+            )}
+            {item.impact && <p className="impact"><strong>Impact:</strong> {item.impact}</p>}
+            <button onClick={handleButtonClick}>See Demo</button>
           </motion.div>
         </div>
       </div>

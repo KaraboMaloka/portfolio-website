@@ -57,17 +57,15 @@ const AboutMe = () => {
                 </div>
                 <div className='text-container'>
                     <p>
-                      Hello there. I’m Karabo Maloka, a dynamic Coordinator and Creative Designer currently pursuing a BCom Honours in Information Systems at the University of Johannesburg with the Department of Applied Information Systems. My journey blends business strategy, digital storytelling, and human-centred design.
+                      Hello there. I’m Karabo Maloka, a Junior Software Developer with a focus in UX Design, currently pursuing a BCom Honours in Information Systems at the University of Johannesburg with the Department of Applied Information Systems. 
+                      Blend human-centred design, front-end fundamentals, and product thinking to ship usable, accessible web experiences.
+                      Comfortable moving from discovery and wireframing to Jira stories, release notes and development of the product.
                     </p>
+            
 
-                    <p>
-                      With a foundation in both Business Information Technology and Journalism, I bring a hybrid skillset to every project. From developing mobile and web platforms to coordinating university-wide events and designing user interfaces that connect with real people. 
-                    </p>
-
-                    <p>
-                      As the current Marketing Coordinator for the School of Consumer Intelligence and Information Systems (SCiiS), and former UX Design Lead at the UJ Technopreneurship Centre, I’ve led communications for major tech events, co-developed platforms like the GBV Reporting Tool, and actively champion student innovation. 
-                    </p>
-
+                    <p>Currently working as a Junior Developer at Paycorp, a leading fintech company delivering secure and innovative payment technologies across South Africa. 
+                      I contribute to the development of digital platforms that support financial inclusion and seamless transactions, with a growing focus on user-driven functionality and system scalability.
+                      </p>
                     <p>
                       I’m passionate about building digital experiences that are functional, inclusive, and future-ready. Additionally, I thrive in spaces where creativity meets systems thinking.
                     </p>

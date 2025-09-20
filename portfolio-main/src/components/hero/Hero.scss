@@ -9,16 +9,16 @@
 
   .wrapper {
     max-width: 980px;
-    height: 100%;
+    height: auto;
     margin: auto;
 
     .textContainer {
-      width: 40%;
-      height: 100%;
+      width: 50%;
+      height: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 4px;
+      gap: 2px;
 
       @include mobile {
         height: 40%;
@@ -26,6 +26,27 @@
         gap: 20px;
         align-items: center;
         text-align: center;
+      }
+
+      @media (max-width: 1024px) {
+        width: 60%;
+        h1 {
+          font-size: 48px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        h1 {
+          font-size: 32px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        gap: 16px;
       }
 
       h2 {
@@ -43,21 +64,24 @@
       }
 
       .buttons {
-        
         button { 
-          padding: 20px;
+          padding: 16px;
           border: 1px solid white;
           border-radius: 10px;
           background-color: transparent;
           color: white;
-          margin-right: 20px;
+          margin-right: 12px;
           cursor: pointer;
           font-weight: 300;
+          font-size: 1rem;
         }
       }
 
       img {
-        width: 60px;
+        width: 48px;
+        @media (max-width: 768px) {
+          width: 36px;
+        }
       }
     }
   }
@@ -73,6 +97,24 @@
       width: 100%;
       top: unset;
       bottom: 0;
+      position: relative;
+    }
+
+    @media (max-width: 1024px) {
+      height: 80%;
+      width: 60%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    @media (max-width: 768px) {
+      height: 40%;
+      width: 100%;
+      position: relative;
+      right: unset;
+      top: unset;
+      margin: 0 auto;
     }
 
     img{
@@ -81,8 +123,10 @@
       object-fit:cover;
       display: block;
       margin: 0 auto;
-
-      
+      @media (max-width: 768px) {
+        width: 60%;
+        height: auto;
+      }
     }
   }
 
@@ -94,6 +138,17 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+    pointer-events: none;
+    @media (max-width: 1024px) {
+      font-size: 20vh;
+      width: 80%;
+      bottom: -40px;
+    }
+    @media (max-width: 768px) {
+      font-size: 10vh;
+      width: 100%;
+      bottom: -20px;
+    }
   }
 }
 

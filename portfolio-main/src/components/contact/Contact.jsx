@@ -71,10 +71,7 @@ const Contact = () => {
           <h2>Address:</h2>
           <span>Auckland Park, Johannesburg, Gauteng, 2092</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Phone:</h2>
-          <span>+27 81 214 7312</span>
-        </motion.div>
+
       </motion.div>
       <div className="formContainer">
         <motion.div

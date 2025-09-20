@@ -52,7 +52,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>KARABO MALOKA</motion.h2>
           <motion.h1 variants={textVariants}>
-          Project Coordinator & Creative Designer
+          Software Developer & UX Designer
           </motion.h1>
           {/* <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -79,7 +79,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        UX Designer Storytelling
+        UX Designer Developer
       </motion.div>
       <div className="imageContainer">
         <img src="./Karabo-Hero.png" alt="" />
